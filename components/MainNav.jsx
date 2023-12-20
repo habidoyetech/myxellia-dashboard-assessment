@@ -6,7 +6,7 @@ import SearchInput from './SearchInput'
 
 const MainNav = () => {
   return (
-    <ComponentLayout boxH='67px' bg='#FFFFFF' display='flex' alignItems='center' boxShadow='md'>
+    <ComponentLayout boxH='67px' bg='#FFFFFF' display='flex' alignItems='center' boxShadow='base'>
         <Box display='flex'  justifyContent='space-between'>
             <HStack>
                 <NavLink textfontWeight={600} boxBg='#F5F5F5' boxBorderRadius={7} linkName='Dashboard' linkLogo='/icons/dashboard.svg' linkLogoAlt='Dashboard'/>
