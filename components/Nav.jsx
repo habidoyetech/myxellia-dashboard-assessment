@@ -1,8 +1,16 @@
-import React from 'react'
+"use client"
+
+import MainNav from "./MainNav"
+import NavHeader from "./NavHeader"
+
 
 const Nav = () => {
   return (
-    <div>Nav</div>
+    <>
+        <NavHeader/>
+        <MainNav/>
+    </>
+    
   )
 }
 

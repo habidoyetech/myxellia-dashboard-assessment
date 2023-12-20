@@ -1,7 +1,8 @@
 import { fonts } from './fonts'
 import './globals.css';
 import { Providers } from './providers';
-import { Container } from '@chakra-ui/react';
+import { Container, Box } from '@chakra-ui/react';
+import Nav from '@/components/Nav';
 
 
 export const metadata = {
@@ -16,14 +17,12 @@ export default function RootLayout({
     <html lang='en' className={fonts.poppins.variable}>
       <body >
         <Providers>
-          <Container >
-            <p>This is me</p>
-            {children}
-          </Container>
+          <Box bg='#FBFCFC' w='100vw' minH='100vh'>
+            <Nav/>
 
-          
-          
-          
+            {children}
+
+          </Box> 
         </Providers>
       </body>
     </html>
