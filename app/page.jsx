@@ -1,11 +1,8 @@
 "use client"
 
-import { Link } from '@chakra-ui/next-js'
 import ComponentLayout from '@/components/ComponentLayout';
-import { Box, HStack, Heading, Image, Text , Flex, Button, Divider, Tabs, TabList, TabPanel, TabPanels, Tab, Grid, VStack} from '@chakra-ui/react';
+import { Box, HStack, Heading, Image, Text , Flex, Divider, Tabs, TabList, TabPanel, TabPanels, Tab, Grid, VStack} from '@chakra-ui/react';
 import DashboardDataBox from '@/components/DashboardDataBox';
-import MyLineChart from '@/components/MyLineChart';
-import MyChart from '@/components/MyLineChart';
 import StatComponent from '@/components/StatComponent';
 import StatDataGroup from '@/components/StatDataGroup';
 import './globals.css'

@@ -1,7 +1,7 @@
 import { fonts } from './fonts'
 import './globals.css';
 import { Providers } from './providers';
-import { Container, Box } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import Nav from '@/components/Nav';
 
 

@@ -3,7 +3,7 @@
 
 import React from 'react';
 import {
-    Box, Flex, Grid, HStack,
+    Box, Grid, 
 } from '@chakra-ui/react'
 import StatComponent from './StatComponent';
 
