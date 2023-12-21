@@ -20,9 +20,9 @@ const DashboardOverview = ({overviewLogo, overviewAlt, overViewName, overviewDat
         
         <HStack>
             {
-              overviewData.map((data) => {
+              overviewData.map((data, index) => {
                 return (
-                  <OverviewBoxData value={data.value} type={data.type} width={width}/>
+                  <OverviewBoxData key={index} value={data.value} type={data.type} width={width}/>
                 )
               })
             }

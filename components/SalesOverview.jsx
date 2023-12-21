@@ -17,8 +17,8 @@ import SalesOverviewChartData from './SalesOverviewChartData';
 
 const SalesOverview = () => {
   return (
-    <Box w='100%' display='flex' gap={8}>
-        <HStack w='75%' >
+    <Box w='100%' display='flex' flexDir={{base: 'column' , lg: 'row'}} gap={8}>
+        <HStack  minW='600px' w={{base: '100%', lg:'75%'}} >
             <DashboardDataBox>
                 <Box w overflow='hidden'>
                     <Flex px={6} pt={6} pb={3} justifyContent='space-between'>
@@ -109,30 +109,30 @@ const SalesOverview = () => {
                 
             </DashboardDataBox>
         </HStack>
-        <VStack w='35%' spacing={8}>
-        <DashboardOverview 
-            overViewName='Property Name' 
-            overviewAlt='Overview Logo' 
-            overviewLogo='/icons/Group.svg' 
-            overviewData={[
-            { value:0, type: 'Total'},
-            { value:0, type: 'Available'},
-            { value:0, type: 'Sold Out'},
-            ]}
-            width='88px'
-        />
-        <DashboardOverview 
-            overViewName='Property Name' 
-            overviewAlt='Overview Logo' 
-            overviewLogo='/icons/Group.svg' 
-            overviewData={[
-            { value:0, type: 'Total'},
-            { value:0, type: 'New'},
-            { value:0, type: 'Active'},
-            {value: 0, type: 'Inactive'}
-            ]}
-            width='66px'
-        />
+        <VStack flexDir={{base: 'column' , md: 'row', lg: 'column'}}  w={{base: '100%', lg:'35%'}} spacing={8}>
+            <DashboardOverview 
+                overViewName='Property Name' 
+                overviewAlt='Overview Logo' 
+                overviewLogo='/icons/Group.svg' 
+                overviewData={[
+                { value:0, type: 'Total'},
+                { value:0, type: 'Available'},
+                { value:0, type: 'Sold Out'},
+                ]}
+                width='100px'
+            />
+            <DashboardOverview 
+                overViewName='Customer Overview' 
+                overviewAlt='Overview Logo' 
+                overviewLogo='/icons/Profile.svg' 
+                overviewData={[
+                { value:0, type: 'Total'},
+                { value:0, type: 'New'},
+                { value:0, type: 'Active'},
+                {value: 0, type: 'Inactive'}
+                ]}
+                width='72px'
+            />
         </VStack>
     </Box>
   )
