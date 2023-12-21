@@ -5,7 +5,7 @@ import React from 'react'
 
 const DashboardDataBox = ({children}) => {
   return (
-    <Box bg='#FFFFFF' boxShadow='base' borderRadius='16px'>
+    <Box w='100%' bg='#FFFFFF' boxShadow='base' borderRadius='16px'>
         {children}
     </Box>
   )
