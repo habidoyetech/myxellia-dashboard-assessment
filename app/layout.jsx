@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang='en' className={fonts.poppins.variable}>
       <body >
         <Providers>
-          <Box bg='#FBFCFC'  overflowX='hidden'>
+          <Box bg='#FBFCFC' overflowX='hidden'>
             <Nav/>
 
             {children}

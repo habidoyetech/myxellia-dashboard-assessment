@@ -14,7 +14,7 @@ const NavHeader = () => {
             </Box>
             <Spacer/>
             <HStack spacing='32px'>
-                <HStack spacing='24px'>
+                <HStack display={['none','none', 'flex']} spacing='24px'>
                     <Box>
                         <Image src='/icons/Plus.svg' alt=''/>
                     </Box>
@@ -26,11 +26,11 @@ const NavHeader = () => {
                     </Box>
                 </HStack>
                 <Flex gap={5}>
-                    <Box>
+                    <Box >
                         <Image src='/icons/profile.svg' alt='Profile Image' h='48px' height='48px'/>
                     </Box>
                     <HStack spacing={5}>
-                        <Text color='white' fontWeight={500}>Ahmed Ali</Text>
+                        <Text display={['none', 'block']} color='white' fontWeight={500}>Ahmed Ali</Text>
                         <Box cursor='pointer'>
                             <Image  src='/icons/Vector.svg' alt='' h='6px' w='12px'/>
 
