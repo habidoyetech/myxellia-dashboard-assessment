@@ -14,17 +14,20 @@ import {
     HStack
   } from '@chakra-ui/react'
 
-const StatComponent = ({statNumberColor, statIcon, statPercentColor}) => {
+const StatComponent = ({ statPadding = 0, statNumberColor, statLabelValue, statIcon, statPercentColor, borderRadius = '0px', border='0px', borderColor, statHelpText, statNumberFontSize = '20px', statHelpTextFontSize = '10px'}) => {
   return (
-    <Box w='189px' h='75px' display='flex' alignItems='center'>
-        <Stat p={3} borderRadius='12px' border='1px' borderColor='#e4e4e4'>
-            {/* <StatLabel>Collected Fees</StatLabel> */}
-            <StatNumber mb={2} textAlign='left' color={statNumberColor} fontWeight={600} fontSize='20px' lineHeight='25px'>&#8358; 0.00</StatNumber>
+    <Box  h='75px' display='flex' alignItems='center'>
+        <Stat p={statPadding}  borderRadius={borderRadius} border={border} borderColor={borderColor}>
+            {statLabelValue ? <StatLabel color='#12D8A0' fontSize='14px'>{statLabelValue}</StatLabel>: <></>}
+            <StatNumber mb={1} textAlign='left' color={statNumberColor} fontWeight={600} fontSize={statNumberFontSize} lineHeight='25px'>&#8358; 0.00</StatNumber>
             <StatHelpText>
-                <HStack fontSize='10px'>
-                    <Text color='#3d3d3d'>Balance</Text>
+                <HStack fontSize={statHelpTextFontSize}>
+                    <Text color='#3d3d3d'>{statHelpText}</Text>
                     <Image src={statIcon}/>
-                    <Text fontSize='10px' color={statPercentColor}>0 &#37;</Text>
+                    {
+                      statPercentColor ? <Text fontSize='10px' color={statPercentColor}>0 &#37;</Text>: <></>
+                    }
+                    
                 </HStack> 
             </StatHelpText>
         </Stat>

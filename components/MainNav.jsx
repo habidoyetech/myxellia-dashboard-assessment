@@ -1,4 +1,5 @@
 "use client"
+
 import ComponentLayout from './ComponentLayout'
 import { Box, HStack } from '@chakra-ui/react'
 import NavLink from './NavLink'

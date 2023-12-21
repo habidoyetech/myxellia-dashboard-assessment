@@ -1,4 +1,4 @@
-
+"use client"
 
 import { Input, InputGroup, IconButton, InputRightElement } from '@chakra-ui/react';
 import SearchIcon from './SearchIcon';
