@@ -17,6 +17,7 @@ import { Box,
 import { useDisclosure } from '@chakra-ui/react';
 import ComponentLayout from './ComponentLayout';
 import MyCalendar from './MyCalender';
+import DatePickerComponent from './DatePickerComponent';
 
 
 const NavHeader = () => {
@@ -37,11 +38,14 @@ const NavHeader = () => {
                         <Image src='/icons/Plus.svg' alt=''/>
                     </Box>
                     <Box>
-                    
-                        <Button ref={btnRef} colorScheme='transparent' onClick={onOpen}>
+                        <DatePickerComponent>
                             <Image src='/icons/Calendar.svg' alt='Calender'/>
-                        </Button>
-                        <Drawer
+                        </DatePickerComponent>
+                    
+                        {/* <Button ref={btnRef} colorScheme='transparent' onClick={onOpen}>
+                            <Image src='/icons/Calendar.svg' alt='Calender'/>
+                        </Button> */}
+                        {/* <Drawer
                             isOpen={isOpen}
                             placement='right'
                             onClose={onClose}
@@ -62,7 +66,7 @@ const NavHeader = () => {
 
                             
                             </DrawerContent>
-                        </Drawer>
+                        </Drawer> */}
 
                         
                     </Box>
