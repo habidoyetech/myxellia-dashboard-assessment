@@ -72,7 +72,7 @@ const NavHeader = () => {
                 </HStack>
                 <Flex gap={5}>
                     <Box >
-                        <Image src='/icons/profile.svg' alt='Profile Image' h='48px' height='48px'/>
+                        <Image src='/icons/profilewhite.svg' alt='Profile Image' h='48px' height='48px'/>
                     </Box>
                     <HStack spacing={5}>
                         <Text display={['none', 'block']} color='white' fontWeight={500}>Ahmed Ali</Text>
