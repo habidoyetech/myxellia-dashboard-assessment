@@ -11,15 +11,16 @@ import {
     Box,
     Text,
     Image,
-    HStack
+    HStack,
+    Code
   } from '@chakra-ui/react'
 
-const StatComponent = ({ statPadding = 0, statNumberColor, statLabelValue, statIcon, statPercentColor, borderRadius = '0px', border='0px', borderColor, statHelpText, statNumberFontSize = '20px', statHelpTextFontSize = '10px'}) => {
+const StatComponent = ({ statPadding = 0, children, statNumberColor, statLabelValue, statIcon, statPercentColor, borderRadius = '0px', border='0px', borderColor, statHelpText, statNumberFontSize = '20px', statHelpTextFontSize = '10px'}) => {
   return (
     <Box  h='75px' display='flex' alignItems='center'>
         <Stat p={statPadding}  borderRadius={borderRadius} border={border} borderColor={borderColor}>
-            {statLabelValue ? <StatLabel color='#12D8A0' fontSize='14px'>{statLabelValue}</StatLabel>: <></>}
-            <StatNumber mb={1} textAlign='left' color={statNumberColor} fontWeight={600} fontSize={statNumberFontSize} lineHeight='25px'>&#8358; 0.00</StatNumber>
+            {statLabelValue ? <StatLabel pb={2} color='#12D8A0' fontSize='14px'>{statLabelValue}</StatLabel>: <></>}
+            <StatNumber mb={1} textAlign='left' color={statNumberColor} fontWeight={600} fontSize={statNumberFontSize} lineHeight='25px'>{children}</StatNumber>
             <StatHelpText>
                 <HStack fontSize={statHelpTextFontSize}>
                     <Text color='#3d3d3d'>{statHelpText}</Text>

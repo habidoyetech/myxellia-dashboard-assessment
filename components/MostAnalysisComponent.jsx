@@ -10,7 +10,7 @@ const MostAnalysisComponent = ({mostName, balanceUnitImageBorderColor}) => {
   return (
     <Box mt={5}>
         <Box>
-            <Text fontSize='10px' fontWeight={400} lineHeight='12px'>{mostName}</Text>
+            <Text fontSize='10px' color='#191919' fontWeight={400} lineHeight='12px'>{mostName}</Text>
         </Box>
         <Divider/>
         <Box mt={2} >

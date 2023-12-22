@@ -22,6 +22,7 @@ const SalesOverviewChartData = () => {
 
     const year = ['Jan', 'Feb', 'Mar', 'April', 'Mar', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     const daysInWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat']
+    const daysInMonth = Array.from({ length: 30 }, (_, index) => index + 1);
 
   return (
     <Box w='100%'>
@@ -76,9 +77,9 @@ const SalesOverviewChartData = () => {
                                 <Divider orderBottomWidth='2px'/>
                                     <HStack spacing={4} mt={1}>
                                         {
-                                            year.map((month, index) => {
+                                            daysInMonth.map((day, index) => {
                                                 return (
-                                                    <Text key={index} color='#919191' fontSize='10px' fontWeight={500} lineHeight='12px'>{month}</Text>
+                                                    <Text key={index} color='#919191' fontSize='10px' fontWeight={500} lineHeight='12px'>{day}</Text>
 
                                                 )
                                             })

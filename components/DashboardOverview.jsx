@@ -17,17 +17,21 @@ const DashboardOverview = ({overviewLogo, overviewAlt, overViewName, overviewDat
             <Image alt='Next Image' src='/icons/nest.svg'/>
           </HStack>
         </Box>
+        <Box w='100%'>
+          <HStack w='100%'>
+              {
+                overviewData.map((data, index) => {
+                  return (
+                    <OverviewBoxData key={index} value={data.value} type={data.type}/>
+                  )
+                })
+              }
+              
+          </HStack>
+          
+        </Box>
         
-        <HStack>
-            {
-              overviewData.map((data, index) => {
-                return (
-                  <OverviewBoxData key={index} value={data.value} type={data.type} width={width}/>
-                )
-              })
-            }
-            
-        </HStack>
+        
 
       </Box>
         

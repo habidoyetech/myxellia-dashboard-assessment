@@ -1,11 +1,29 @@
 "use client"
 
 import React from 'react';
-import { Box, Container, Flex, HStack, Image, Spacer, Text } from '@chakra-ui/react';
+import { Box, 
+    Button, 
+    Drawer, 
+    DrawerOverlay, 
+    DrawerContent, 
+    DrawerCloseButton,  
+    DrawerBody,  
+    Flex, 
+    HStack, 
+    Image, 
+    Spacer, 
+    Text 
+} from '@chakra-ui/react';
+import { useDisclosure } from '@chakra-ui/react';
 import ComponentLayout from './ComponentLayout';
+import MyCalendar from './MyCalender';
 
 
 const NavHeader = () => {
+
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const btnRef = React.useRef()
+
   return (
     <ComponentLayout boxH={82} bg='#191919' display='flex' alignItems='center' justifyContent='center'>
         <Flex>
@@ -19,7 +37,34 @@ const NavHeader = () => {
                         <Image src='/icons/Plus.svg' alt=''/>
                     </Box>
                     <Box>
-                        <Image src='/icons/Calendar.svg' alt='Calender'/>
+                    
+                        <Button ref={btnRef} colorScheme='transparent' onClick={onOpen}>
+                            <Image src='/icons/Calendar.svg' alt='Calender'/>
+                        </Button>
+                        <Drawer
+                            isOpen={isOpen}
+                            placement='right'
+                            onClose={onClose}
+                            finalFocusRef={btnRef}
+                            size='sm'
+                            colorScheme='gray'
+                            bg='black'
+                        >
+                            <DrawerOverlay />
+                            <DrawerContent borderRadius='20px'  p={4} h='400px' w='700px'>
+                            <DrawerCloseButton color='white'/>
+                            
+
+                            <DrawerBody  >
+                               
+                                <MyCalendar />
+                            </DrawerBody>
+
+                            
+                            </DrawerContent>
+                        </Drawer>
+
+                        
                     </Box>
                     <Box>
                         <Image src='/icons/notification.svg' alt='Notification'/>
